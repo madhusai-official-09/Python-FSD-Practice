@@ -30,6 +30,17 @@
 #     print("Perfect Square: ",num)
 
 # Write a Python program that checks if a number is divisible by both 2 and 3.
-num = int(input("Enter a number:"))
-if num%2==0 and num%3==0:
-    print(num," is divisible by both 2 and 3")
+# num = int(input("Enter a number:"))
+# if num%2==0 and num%3==0:
+#     print(num," is divisible by both 2 and 3")
+
+# Write a Python program that determines if a number is a perfect cube.
+# num = int(input("Enter a number: "))
+# root = num**(1/3)
+# if num == root**3:
+#     print(num,"is a Perfect Cube")
+
+# Write a Python program that checks if a given number is a multiple of 4.
+# num = int(input("Enter a number: "))
+# if num % 4 == 0:
+#     print(num,"is a multiple of 4.")
