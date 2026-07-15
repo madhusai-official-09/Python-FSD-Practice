@@ -52,3 +52,51 @@ while num<=50:
         print(num,end=" ")
     num += 1 """
     
+# 7.Create a program that calculates the sum of the digits of a given integer using a while loop.
+
+""" num = int(input("Enter a number: ")) # 5
+s = 0
+i = 1
+while i<=num: 
+    s += i 
+    
+    i += 1 
+print(s) """
+
+# 8. Generate a multiplication table for a given number using a while loop.
+
+""" num = int(input("Enter a number: "))
+m = 1
+while m<=100:
+    multi = num * m 
+    print(f"{num} X {m} = {multi}")
+    m += 1 """
+    
+# 9. Write a program to find all the factors of a given number using a while loop.
+
+""" num = int(input("Enter a number: "))
+d = 1
+while d<=num:
+    if num%d == 0:
+        print(d)
+    d+=1 """
+     
+# 10. Implement a program to reverse a given number using a while loop.
+
+""" num = int(input("Enter a number: "))
+rev = 0
+while num > 0:
+    digit = num%10 
+    rev = rev*10+digit
+    num = num //10
+print(rev) """
+
+# 11. Create a program that prompts the user to enter a password. Keep asking until they enter the correct password.
+
+""" orgpass = "Madhu"
+while True:
+    passw = input("Enter the password: ")
+    if passw == orgpass:
+        print("correct")
+        break  """
+    
