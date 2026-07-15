@@ -43,3 +43,12 @@ while b <= num:
     count*=b
     b+=1
 print(count) """
+
+# Write a while loop that prints all even numbers between 1 and 50.
+
+""" num = 1
+while num<=50:
+    if num % 2== 0:
+        print(num,end=" ")
+    num += 1 """
+    
