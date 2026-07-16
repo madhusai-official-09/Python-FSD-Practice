@@ -1,24 +1,26 @@
-# Basic Counting: Write a while loop that counts from 1 to 10 and prints each number.
+# 1. Basic Counting: Write a while loop that counts from 1 to 10 and prints each number.
 
 """ num = 1
 while num<=10:
     print(num)
     num += 1 """
 
-# Create a program that asks the user to enter a number, and then use a while loop to count down from that number to 1, printing each value.
+# 2. Create a program that asks the user to enter a number, and then use a while loop to count down from that number to 1, printing each value.
 
 # num = int(input("Enter a number: "))
 """ while num >=1:
     print(num)
     num -= 1 """
 
-# Write a while loop that calculates the sum of even numbers from 1 to 100.
+#3. Write a while loop that calculates the sum of even numbers from 1 to 100.
 """ num =  int(input("Enter a number: "))
-while num <= 100 and num %2==0 :
-    print(num)
-    num += num """
+sum = 0
+while num<=100:
+    sum+=num
+    num += 2
+print(sum) """
 
-# Create a simple number guessing game using a while loop. Generate a random number and have the user guess it, giving hints like "too high" or "too low" until they guess correctly.
+# 4. Create a simple number guessing game using a while loop. Generate a random number and have the user guess it, giving hints like "too high" or "too low" until they guess correctly.
 
 """ import random 
 random_number = random.randint(1,10)
@@ -34,7 +36,7 @@ while True:
         print("Your guess is correct...")
         break """
 
-# Use a while loop to calculate the factorial of a given number.
+# 5. Use a while loop to calculate the factorial of a given number.
 
 """ num = int(input("Enter a number: "))
 b = 1
@@ -44,7 +46,7 @@ while b <= num:
     b+=1
 print(count) """
 
-# Write a while loop that prints all even numbers between 1 and 50.
+# 6. Write a while loop that prints all even numbers between 1 and 50.
 
 """ num = 1
 while num<=50:
@@ -54,14 +56,14 @@ while num<=50:
     
 # 7.Create a program that calculates the sum of the digits of a given integer using a while loop.
 
-""" num = int(input("Enter a number: ")) # 5
-s = 0
-i = 1
-while i<=num: 
-    s += i 
-    
-    i += 1 
-print(s) """
+""" num = int(input("Enter a number: ")) 
+sum = 0
+
+while num > 0:
+    digit = num % 10
+    sum += digit
+    num //= 10
+print(sum) """
 
 # 8. Generate a multiplication table for a given number using a while loop.
 
@@ -99,4 +101,58 @@ while True:
     if passw == orgpass:
         print("correct")
         break  """
+    
+# 12. Write a program using a while loop to generate the first n terms of the Fibonacci sequence.
+
+""" num = int(input("Enter a number: "))
+
+a = 0
+b = 1
+count = 1
+
+while count<=num:
+    print(a)
+    temp = a + b
+    a = b
+    b = temp
+    count += 1  """
+
+# 13. Build a program that checks if a given number is prime using a while loop.
+
+""" num = int(input("Enter a number: "))
+d = 2
+while d<=num//2:
+    if num%d==0:
+        print("Not Prime...")
+        break
+    d = d+1
+else:
+    print("Prime...") """
+    
+# 14. Create a program that checks if a given word or phrase is a palindrome (reads the same forwards and backwards) using a while loop.
+
+
+# 15. Write a program to generate the first n rows of Pascal's Triangle using while loops.
+
+# 16. Create a program that converts a given integer into words (e.g., 123 -> "one hundred twenty-three") using a while loop.
+
+# 17. Write a program to reverse a given string using a while loop.
+
+# 18. Implement a program to find the greatest common divisor of two numbers using a while loop and the Euclidean algorithm.
+
+# 19. Create a program that converts a binary number (entered as a string) to its decimal equivalent using a while loop
+
+# 20. Write a program that prints all prime numbers between 1 and 100 using a while loop
+
+""" num = 1
+d = 2
+count = 1
+while d<=num//2 and count<=100:
+    if num%2==0:
+        print("Not Prime...")
+        break
+    d+=1
+else:
+    print("Prime...")
+    count+=1 """
     
