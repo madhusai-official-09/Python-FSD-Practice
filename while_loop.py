@@ -144,15 +144,14 @@ else:
 
 # 20. Write a program that prints all prime numbers between 1 and 100 using a while loop
 
-""" num = 1
+num = 1
 d = 2
-count = 1
-while d<=num//2 and count<=100:
+while d<=num//2 and num<=100:
     if num%2==0:
         print("Not Prime...")
         break
     d+=1
 else:
     print("Prime...")
-    count+=1 """
+
     
