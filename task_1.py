@@ -87,3 +87,30 @@ while count<=num:
     if count%2==0 and count%3==0:
         print(count)
     count+=1 """
+    
+    
+# ATM Machine
+
+pin =1234
+show_menu = False
+count = 1
+while count<=3:
+    mypin = int(input("Enter your pin: "))
+    if mypin == pin:
+        print("Valid Pin")
+        show_menu = True
+        break
+    else:
+        print("Invalid Pin")
+    count+=1
+else:
+    print("Card Blocked")
+
+if show_menu == True:
+    
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. Check Balance")
+    print("4. Exit")
+    
+    ch = int(input("Enter your Choice(1/2/3/4): "))
