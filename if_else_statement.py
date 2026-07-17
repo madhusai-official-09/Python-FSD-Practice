@@ -20,7 +20,7 @@ else:
     print("Not a century year") """
     
 # 4. Write a Python program that checks if a given number is prime.
-num = int(input("Enter a Number: "))
+""" num = int(input("Enter a Number: "))
 d = 2
 while d<=num//2:
     if num%d==0:
@@ -28,7 +28,7 @@ while d<=num//2:
         break
     d+=1
 else:
-    print("Prime ->",num)
+    print("Prime ->",num) """
     
 # 5. Write a Python program that checks if a person is eligible to vote based on their age.
 """ age = int(input("Enter your age: "))
