@@ -26,6 +26,21 @@ while b<=num:
     b+=1
 print(count) """
 
+# 3. Write a program to count how many numbers between 1 and n are greater than 20.
+# Input:
+# 25
+# Output:
+# 5
+# Explanation:
+# The numbers are 21, 22, 23, 24, and 25.
+
+""" num1 = 1
+n = int(input("Enter a Number: "))
+while num1<=n:
+    if num1>20:
+        print(num1)
+    num1+=1 """
+
 # 4. Write a program to print all numbers between 1 and n except multiples of 5.
 # Input:
 # 15
@@ -92,3 +107,5 @@ while i<=num:
         sum+=i
     i+=1
 print(sum)   """  
+
+
