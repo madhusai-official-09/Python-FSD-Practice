@@ -131,6 +131,17 @@ else:
     
 # 14. Create a program that checks if a given word or phrase is a palindrome (reads the same forwards and backwards) using a while loop.
 
+word = input("Enter Word: ")
+i = 0
+j = len(word) - 1
+while i <= j:
+    if word[i] == word[j]:
+        i +=1
+        j-=1
+        print("Palindrome",word[i],word[j])
+        break
+    else:
+        print("Not Palindrome")
 
 # 15. Write a program to generate the first n rows of Pascal's Triangle using while loops.
 
@@ -154,7 +165,8 @@ while num<=100:
     else:
         print("Prime", num)
     num+=1 """
-    
+
+
     
 
     
