@@ -34,4 +34,56 @@ print(count) """
 # Explanation:
 # Display levels that are divisible by 3.
     
+""" levels = 15
+i = 1
+while i<=levels:
+    if i%3==0:
+        print(i)
+    i+=1 """
+    
+# 4.A library contains books numbered from 1 to 50. Write a program to count how many book numbers are multiples of 7?
+
+# Input:50
+# Output:7
+
+# Explanation:
+# The book numbers are 7, 14, 21, 28, 35, 42 and 49.
+
+""" books = 50
+i = 1
+while i<=books:
+    if i%7==0:
+        print(i)
+    i+=1 """
+    
+# 5.Write a program to find the first number greater than 100 that is divisible by both 7 and 9 using a while loop?
+
+# Output:126
+
+# Explanation:
+# Continue checking numbers until a number divisible by both 7 and 9 is found.
+
+""" num = int(input("Enter a Number: "))
+while True:
+    if (num%7==0 and num%9==0) and (num>100):
+        print(num)
+        break
+    num+=1 """
+
+# 6.Write a program to print all numbers from 1 to n whose square is less than 50?
+
+# Input:20
+# Output:1 2 3 4 5 6 7
+# Explanation:
+# The squares of these numbers are less than 50.
+
+""" num = 20
+i = 1
+while i <=num:
+    sqr = i*i
+    if sqr<50:
+        print(i)
+    i+=1 """
+    
+    
 
