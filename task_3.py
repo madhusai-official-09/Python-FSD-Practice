@@ -84,6 +84,19 @@ while i <=num:
     if sqr<50:
         print(i)
     i+=1 """
-    
-    
 
+        
+""" num = int(input("Enter a Number: "))
+rev = 0
+while num > 0:
+    d = num%10
+    rev = (rev*10)+ d
+    num = num//10
+org = 0
+while rev > 0:
+    d1 = rev%10
+    org = (org*10) + d1
+    rev = rev//10
+print(org) """
+
+        
