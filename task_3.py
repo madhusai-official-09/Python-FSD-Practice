@@ -99,4 +99,16 @@ while rev > 0:
     rev = rev//10
 print(org) """
 
+num = int(input("Enter a Number:"))
+h = 1
+org = 0
+i = 1
+while i<=num:
+    d = num//h
+    h = h * 10
+    org = org+d
+    num = num%h
+    i+=1
+print(org)
+
         
