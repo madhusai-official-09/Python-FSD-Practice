@@ -171,6 +171,23 @@ while num<=100:
     num+=1 """
 
 
-    
-
+n =  int(input("Enter n value: ")) # 1
+cnt  = 0
+a = 0
+b = 1
+while True:
+    c = a + b # 0+1 -> c = 1 , c = 2
+    if c>1: # 1>1 -> F , 2>1 -> T
+        d = 2 
+        while d<=c//2: # 2<=2//2 -> 2<=1 -> F
+            if c%d==0: 
+                break
+            d+=1
+        else:
+            cnt  = cnt+1 # cnt = 1
+            if cnt == n: # 1 == 1
+                print(c) # 2
+                break
+    a = b # a = 1
+    b = c # b = 1
     
