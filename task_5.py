@@ -65,11 +65,11 @@ a = 0
 b = 1
 print(a,b,end=" ")
 i = 0
-while i<=n:
+while i<=n-2:
     c = a+b
+    print(c,end = " ")
     a = b
     b = c
-    print(c,end = " ")
     i+=1 """
     
 # 5. Write a Python program to check whether a given number is a Neon Number using a while loop.
@@ -92,4 +92,35 @@ if s == num:
     print("Neon Number")
 else:
     print("Not Neon Number") """
+    
+    
+num = int(input("Enter a Number: ")) #8853
+largest = 0 # 3, 5, 8, 8
+second = 0 # 3, 5, 8
+third = 0 # 3, 5
+fourth = 0 # 3
+while num>0: #8853>0, 885, 88, 8
+    d = num%10 #8853%10 -> d= 3, 5, 8, 8
+    if d>=largest: #3>=0 -> T, 5>=3 -> T, 8>=5 -> T, 8>=8 -> T
+        fourth = third # 0 = 0, 0 = 0, 0 = 0, fourth = 3
+        third = second # 0 = 0, 0 = 0, third = 3 , third = 5
+        second =largest # 0 = 0, second = 3, second = 5, second = 8
+        largest = d # largest = 3, 5, 8, 8
+    elif d>=second : 
+        fourth = third
+        third = second
+        second = d
+    elif d>=third :
+        fourth = third
+        third = d
+    elif d>=fourth :
+        fourth = d
+    num=num//10 # 8853//10 = 885 , 88, 8
+print(largest,second,third,fourth) 
+
+
+    
+      
+    
+
     
