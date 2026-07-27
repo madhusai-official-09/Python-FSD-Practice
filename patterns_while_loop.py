@@ -4,7 +4,7 @@
           * * *
          * * * * """
          
-rows = int(input("Enter number of rows: "))
+""" rows = int(input("Enter number of rows: "))
 row_cnt = 1
 while row_cnt<=rows:
     spaces = rows - row_cnt
@@ -19,4 +19,5 @@ while row_cnt<=rows:
         star+=1
     print()
         
-    row_cnt+=1
+    row_cnt+=1 """
+    
