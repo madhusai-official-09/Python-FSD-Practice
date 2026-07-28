@@ -70,8 +70,7 @@ for row_cnt in  range(1,row+1):
 
 """ row = 5
 for row_cnt in range(1,row+1):
-    print(row_cnt,end = "")
-    for row_no in range(1,row_cnt):
+    for row_no in range(1,row_cnt+1):
         print(row_cnt,end="")
     print() """
             
