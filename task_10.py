@@ -39,6 +39,59 @@ for i in range(1,n+1):
 # 1 4 9 16 25 36 49
 # Explanation:
 # A Perfect Square Number is a number that can be expressed as the square of an integer.
-           
 
-        
+""" n = 50
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        if j*j==i:
+            print(i) """
+# 4. Write a Python program using nested for loops to print the following Alphabet Triangle Pattern.
+# Input:
+# 5
+# Output:
+# A
+# AB
+# ABC
+# ABCD
+# ABCDE
+
+""" rows = 5
+for i in range(1,rows+1):
+    for j in range(1,i+1):
+        print(chr(64+j),end = "")
+    print() """
+    
+# 5. Write a Python program using nested for loops to print the following Repeated Alphabet Pattern.
+# Input:
+# 5
+# Output:
+# A
+# BB
+# CCC
+# DDDD
+# EEEEE
+
+""" rows = 5
+for i in range(1,rows+1):
+    for j in range(1,i+1):
+        print(chr(64+i),end="")
+    print() """
+    
+# 6. Write a Python program using nested for loops to print the following Continuous Number Triangle Pattern.
+# Input:
+# 5
+# Output:
+# 1
+# 23
+# 456
+# 78910
+# 1112131415
+
+""" rows = 5
+n=1
+for i in range(1,rows+1):
+    for j in range(i):
+        print(n,end="")
+        n=n+1
+    print() """
+
