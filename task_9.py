@@ -91,9 +91,9 @@ for row_cnt in range(1,row+1):
     
     
 n = 6
-for i in range(1,n+1):
+for i in range(n):
     for j in range(i,(n**2)+1,n):
-        print(chr(64+(j%27 or j%27==0)),end=" ")
+        print(chr(65+j%26),end=" ")
     print()
     
     
