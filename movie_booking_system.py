@@ -39,21 +39,71 @@ while True:
                 print("Add Shows")
                 
             elif admin_choice==3:
+                while True:
+                    print("1. Add Seat.")
+                    print("2. Delete Seat.")
+                    print("3. View Seats.")
+                    print("4. Back.")
+                    seats_choice = int(input("Enter your Choice(1/2/3/4): "))
+                    if seats_choice == 1:
+                        add_seats = input("Enter Seat Number: ")
+                        if add_seats in seats:
+                            print("Seat Already Exists.")
+                        else:
+                            seats.append(add_seats)
+                            for seat in seats:
+                                print(seat,end=",")
+                            print(add_seats,"added Sucessfully.")
+                    elif seats_choice == 2:
+                        print("="*16)
+                        print("Available Seats")
+                        print("="*16)
+                        print(seats)
+                        del_seat = input("Enter Seat to Delete: ")
+                        if del_seat in seats:
+                            seats.remove(del_seat)
+                            print("Seat Deleted Successfully.")
+                        else:
+                            print("Invalid Seat")
+                    elif seats_choice == 3:
+                        n = len(seats)
+                        if n>0:
+                            print("="*16)
+                            print("Available Seats")
+                            print("="*16)
+                            for seat in seats:
+                                print(seat)
+                        else:
+                            print("="*20)
+                            print("No Seats Available.")
+                            print("="*20)
+                    elif seats_choice == 4:
+                        print("Back")
+                        break
+                    else:
+                        print("Invalid Choice")
+                    
                 print("Manage Seats")
                 
             elif admin_choice==4:
                 while True:
                     print("1. Delete Movie.")
                     print("2. Delete Shows.")
-                    print("3. Back to Admin Menu")
+                    print("3. Back to Admin Menu.")
                     del_choice = int(input("Enter your Choice(1/2/3): "))
                     if del_choice == 1:
-                        del_movie = input("Enter Movie Name to Delete: ")
-                        if del_movie in movies:
-                            movies.remove(del_movie)
-                            print(del_movie,"Movie Deleted Sucessfully.")
+                        print("="*16)
+                        print("Available Movies")
+                        print("="*16)
+                        for movie in movies:
+                            idx = movies.index(movie)
+                            print(idx,".",movie)
+                        del_movie = int(input("Enter Movie No. to Delete: "))
+                        if 0<= del_movie and del_movie < len(movies):
+                            movies.pop(del_movie)
+                            print("Movie Deleted Successfully.")
                         else:
-                            print("Movie Not Found.")
+                            print("Invalid Movie No.")
                     elif del_choice == 2:
                         del_show = input("Enter Show Time to Delete: ")
                         if del_show in shows:
@@ -113,8 +163,17 @@ while True:
                     print("="*20)
                     
             elif user_choice == 3:
-                print("Select Seats")
-                
+                n = len(seats)
+                if n>0:
+                    print("="*16)
+                    print("Available Seats")
+                    print("="*16)
+                    for seat in seats:
+                        print(seat)
+                else:
+                    print("="*20)
+                    print("No Seats Available.")
+                    print("="*20)                
             elif user_choice == 4:
                 print("Book Tickets")
                 
@@ -128,7 +187,9 @@ while True:
                 print("Invalid Choice")
                 
     elif main_choice == 3:
-        print("*"*5,"Thank You For Visiting.","*"*5)
+        print("="*24)
+        print("Thank You For Visiting.")
+        print("="*24)
         break
     else:
         print("Invalid Choice")
