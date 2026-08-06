@@ -87,3 +87,10 @@ print(n_li) """
 """ li = [12, 25, 35, 41, 55, 60, 75]
 n_li = [i for i in li if i%10 == 5 ]
 print(n_li) """
+
+seats = ["Gold",]
+for seat in seats:
+    add_seat = input("Enter: ")
+    seats.append(add_seat)
+    break
+print(seats)
