@@ -21,16 +21,19 @@ while True:
 
             if admin_choice==1:
                     add_movies = input("🎬 Enter Movie Name: ").capitalize()
-                    print("="*16)
-                    print("🎬 Available Movies")
-                    print("="*16)
-                    movies.append(add_movies)
-                    shows.append([])
-                    seats.append([])
-                    for movie in movies:
-                        idx = movies.index(movie)
-                        print(idx,".",movie)
-                    print(add_movies,"added Sucessfully.✅")
+                    if add_movies in movies:
+                        print("Movie Already Exists.😑")
+                    else:
+                        print("="*16)
+                        print("🎬 Available Movies")
+                        print("="*16)
+                        movies.append(add_movies)
+                        shows.append([])
+                        seats.append([])
+                        for movie in movies:
+                            idx = movies.index(movie)
+                            print(idx,".",movie)
+                        print(add_movies,"added Sucessfully.✅")
                     
             elif admin_choice==2:
                 print("="*16)

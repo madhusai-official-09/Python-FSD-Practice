@@ -88,9 +88,8 @@ print(n_li) """
 n_li = [i for i in li if i%10 == 5 ]
 print(n_li) """
 
-seats = ["Gold",]
-for seat in seats:
-    add_seat = input("Enter: ")
-    seats.append(add_seat)
-    break
-print(seats)
+time = "10:00am"
+if len(time)==7:
+    print(time.upper())
+else:
+    print("Invalid time")
