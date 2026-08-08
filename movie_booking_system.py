@@ -67,17 +67,26 @@ while True:
                         for movie in movies:
                             idx = movies.index(movie)
                             print(idx,".",movie)
-                        movie_choice = int(input("🎬 Enter Movie No. to Add Show: "))
+                        movie_choice = int(input("🎬 Enter Movie No. to Add Seat: "))
                         if 0<= movie_choice and movie_choice < len(movies):
                             print("Selected Movie:",movies[movie_choice])
-                            add_seats = input("🔢 Enter Seat Number: ").upper()
-                            if add_seats in seats[movie_choice]:
-                                print("❌ Seat already exists.")
-                            else:
-                                seats[movie_choice].append(add_seats)
-                                for seat in seats[movie_choice]:
-                                    print(seat)
-                                print(seat,"added Sucessfully.✅")
+                            while True:
+                                print("1. Add More Seats")
+                                print("2. Back to Seats Menu.")
+                                choice = int(input("Enter your Choice(1/2): "))
+                                if choice==1:
+                                    add_seats = input("🔢 Enter Seat Number(A1/B1/C1): ").upper()
+                                    if add_seats in seats[movie_choice]:
+                                        print("❌ Seat already exists.")
+                                    else:
+                                        seats[movie_choice].append(add_seats)
+                                        for seat in seats[movie_choice]:
+                                            print(seat)
+                                        print(seat,"added Sucessfully.✅")
+                                elif choice == 2:
+                                    break
+                                else:
+                                    print("❌ Invalid Choice.")
                         else:
                             print("❌ Invalid Movie No.")
                             
@@ -131,7 +140,7 @@ while True:
                         print("Back")
                         break
                     else:
-                        print("Invalid Choice")
+                        print("❌ Invalid Choice")
                     
                 print("Manage Seats")
                 
@@ -187,7 +196,7 @@ while True:
                         print("Back to Admin Menu.")
                         break
                     else:
-                        print("Invalid Choice")
+                        print("❌ Invalid Choice")
                     
             elif admin_choice==5:
                 if len(bookings)>0:
@@ -205,7 +214,7 @@ while True:
                 print("Back to Main Menu")
                 break
             else:
-                print("Invalid Choice")
+                print("❌ Invalid Choice")
                 
     elif main_choice == 2:
         while True:
@@ -326,7 +335,7 @@ while True:
                 print("Back to Main Menu")
                 break
             else:
-                print("Invalid Choice")
+                print("❌ Invalid Choice")
                 
     elif main_choice == 3:
         print("="*24)
@@ -334,4 +343,4 @@ while True:
         print("="*24)
         break
     else:
-        print("Invalid Choice")
+        print("❌ Invalid Choice")
