@@ -45,8 +45,8 @@ for i in li:
     if freq>max_freq:
         max_freq = freq
         max_element = i
-print(max_element)
-print(max_freq) """
+print("Most Repeated Element:",max_element)
+print("Frequency:",max_freq) """
 
 # 4. Write a Python program to find the first non-repeating element in a list.
 # Input:
@@ -61,5 +61,5 @@ for i in li:
     if freq==1:
         first = i
         break
-print(first) """
+print("First Non-Repeating Element:",first) """
     
