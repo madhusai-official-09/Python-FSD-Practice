@@ -89,3 +89,11 @@ for i in li:
 # Split the list into groups of 3 elements and print only those groups where every element is greater than 10.
 
 li = [12, 15, 18, 5, 20, 25, 30, 35, 40]
+for i in range(0,len(li),3):
+    group = li[i:i+3]
+    for x in group:
+        if x<10:
+            break
+        else:
+            print(group)
+            break
