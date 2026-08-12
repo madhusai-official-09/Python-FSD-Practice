@@ -100,7 +100,7 @@ while True:
                             for movie in movies:
                                 idx = movies.index(movie)
                                 print(idx,".",movie)
-                            movie_choice = int(input("Enter Movie No. to Delete Show: "))
+                            movie_choice = int(input("Enter Movie No. to Delete Seat: "))
                             if 0<=movie_choice and movie_choice<len(movies):
                                 print("Selected Movie:",movies[movie_choice])
                                 if len(seats[movie_choice]) > 0:
@@ -125,7 +125,7 @@ while True:
                             for movie in movies:
                                 idx = movies.index(movie)
                                 print(idx,".",movie)
-                            movie_choice = int(input("Enter Movie No. to Delete Show: "))
+                            movie_choice = int(input("Enter Movie No. to View Seats: "))
                             if 0<=movie_choice and movie_choice<len(movies):
                                 print("Selected Movie:",movies[movie_choice])
                                 if len(seats[movie_choice])>0:
@@ -315,15 +315,23 @@ while True:
                     else:
                         print("❌ No Seats Available.")
                     show_choice = input("Select Show Timing(10:00 AM): ").upper()
-                    seat_choice = input("Select Seat(A1/B1/C1): ").upper()
-                    if seat_choice in seats[movie_choice]:
-                        seats[movie_choice].remove(seat_choice)
-                        bookings.append([movies[movie_choice],show_choice,seat_choice])
-                        print("Booking Sucessful.✅")
-                    else:
-                        print("Invalid Seat Choice.❌")
-                else:
-                    print("Invalid Movie Choice.❌")
+                    while True:
+                        print("1. Add More Seats")
+                        print("2. Back to Seats Menu.")
+                        choice = int(input("Enter your Choice(1/2): "))
+                        if choice==1:
+                            seat_choice = input("🔢 Enter Seat Number(A1/B1/C1): ").upper()
+                            if seat_choice in seats[movie_choice]:
+                                seats[movie_choice].remove(seat_choice)
+                                bookings.append([movies[movie_choice],show_choice,seat_choice])
+                                print("Seat Added Sucessfully.✅")
+                                print("Booking Sucessful.✅")
+                            else:
+                                print("Invalid Seat Choice.❌")
+                        elif choice == 2:
+                            break
+                        else:
+                            print("❌ Invalid Choice.")
                 
             elif user_choice == 5:
                 if len(bookings)>0:
