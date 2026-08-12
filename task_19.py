@@ -62,11 +62,7 @@ print(tuple(n_tu)) """
 # Average = 20. Create a new tuple containing only the elements greater than the average.
 
 """ tu = (10, 25, 15, 30, 20)
-avg = sum(tu)//len(tu)
-n_tu = []
-for i in tu:
-    if i>avg:
-        n_tu.append(i)
+n_tu = [i for i in tu if i>sum(tu)//len(tu)]
 print(tuple(n_tu)) """
 
 # 5.Write a Python program to create a new tuple by replacing every even-index element with its square and every odd-index element with its cube.
@@ -78,12 +74,6 @@ print(tuple(n_tu)) """
 # * Even index → Square the element.
 # * Odd index → Cube the element.
 
-""" tu = (2, 3, 4, 5, 6)
-n_tu = []
-for i in tu:
-    idx = tu.index(i)
-    if idx%2==0:
-        n_tu.append(i**2)
-    else:
-        n_tu.append(i**3)
+""" tu = (2,3,4,5,6)
+n_tu = [i**2 if (tu.index(i))%2==0 else i**3 for i in tu]
 print(tuple(n_tu)) """
