@@ -323,7 +323,8 @@ while True:
                             seat_choice = input("🔢 Enter Seat Number(A1/B1/C1): ").upper()
                             if seat_choice in seats[movie_choice]:
                                 seats[movie_choice].remove(seat_choice)
-                                bookings.append([movies[movie_choice],show_choice,seat_choice])
+                                bookings.append([movies[movie_choice],show_choice])
+                                bookings.append(seat_choice)
                                 print("Seat Added Sucessfully.✅")
                                 print("Booking Sucessful.✅")
                             else:
