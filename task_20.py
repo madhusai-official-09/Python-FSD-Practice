@@ -66,7 +66,10 @@ print("Odd Index Tuple:", tuple(odd)) """
 # Output:
 # Palindrome
 
-# tu = (10, 20, 30, 20, 10)
+""" tu = (10, 20, 30, 20, 10)
+res = tu[::-1]
+if tu == res:
+    print("Palindrome") """
 
 # 6. Write a Python program to find the common elements between two sets.
 # Input:
