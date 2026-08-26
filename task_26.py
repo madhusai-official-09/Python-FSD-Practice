@@ -6,20 +6,23 @@
 # Explanation:
 # Count the words that contain at least two vowels.
 
-""" st = "Python is easy to learn"
-vowels = "aeiouAEIOU"
-li = st.split()
-word_count = 0
-for word in li:
-    temp = str(word.lower())
-    count = 0
-    for i in temp:
-        for j in vowels:
-            if i == j:
-                count+=1   
-    if count>=2:
-        word_count+=1
-print(word_count) """
+""" def count_words(st):
+    vowels = "aeiouAEIOU"
+    li = st.split()
+    word_count = 0
+    for word in li:
+        temp = str(word.lower())
+        count = 0
+        for i in temp:
+            for j in vowels:
+                if i == j:
+                    count+=1   
+        if count>=2:
+            word_count+=1
+    return word_count
+st = "Python is easy to learn"
+result = count_words(st)
+print(result) """
 
 # 2.Write a Python function to find the first character that appears more than once in a string.
 # Input:
@@ -29,14 +32,21 @@ print(word_count) """
 # Explanation:
 # The character a is the first character that appears more than once.
 
-""" st = "abcaefbd"
-count = 0
-for i in st:
-    if st[0] == i:
-        count +=1
-if count>1:
-    print(st[0]) """
-    
+""" def first_ch(st):
+    output = {}
+    for i in st:
+        if i not in output:
+            output[i] = 1
+        else:
+            output[i] += 1
+    for i in output:
+        if output[i] > 1:
+            return i
+            
+st = "abcaefbd"
+result = first_ch(st)
+print(result)  """ 
+  
 # 3.Write a Python function to check whether a string contains all unique characters.
 # Input:
 # python
@@ -45,11 +55,12 @@ if count>1:
 # Explanation:
 # Return True if no character appears more than once; otherwise, return False.
 
-""" st = "Python"
-def un_ch(str):
-    for i in str:
-        if i not in str:
-            print(i)
+""" def un_ch(st):
+    new_st = {}
+    for i in st:
+        if i not in new_st:
+    return new_st
+st = "Python"
 res = un_ch(st)
 print(res) """
 
@@ -61,7 +72,7 @@ print(res) """
 # Explanation:
 # Assign ranks based on the values in descending order. The key with the highest value gets rank 1, the next highest gets rank 2, and so on.
 
-dic = {'A': 85, 'B': 92, 'C': 78, 'D': 88}
+""" dic = {'A': 85, 'B': 92, 'C': 78, 'D': 88}
 output= {}
 for i in dic:
     if dic[i] > 90:
@@ -74,9 +85,9 @@ for i in dic:
         output[i]=4
 li = list(output.items())
 for i in range(0,len(li)-1):
-    if li[i][1] >= li[i+1][1]:
-        li[i],li[i+1] = li[i+1],li[i]
+    for j in range(i+1,len(li)):
+        if li[i][1] > li[j][1]:
+            li[i],li[j] = li[j],li[i]
 res ={k:v for k,v in li}
-print(res)
+print(res) """
 
-    
