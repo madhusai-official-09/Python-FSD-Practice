@@ -23,8 +23,16 @@ print(ans) """
 # Output : abccba
 
 """ s = "abc"
-s2 = s[::-1]
-print(s+s2) """
+def mirror_string(st):
+    word = ""
+    for i in st:
+        word+=i
+    for j in st[::-1]:
+        word+=j
+    return word
+
+ans = mirror_string(s)
+print(ans) """
 
 # 3. Write a Python program to find the longest palindromic substring.
 # Input : babad
