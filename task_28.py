@@ -2,19 +2,19 @@
 # Input : aaabbc
 # Output : a3b2c1
 
-""" s = "aaabbc"
 
-def count_ch(st):
-    n_di = {}
-    n_st = ""
+""" def count_ch(st):
+    word = ""
     for i in st:
-        if i in n_di:
-            n_di[i] += 1
-        else:
-            n_di[i] = 1
-    key = 
-    return key
+        count = 0
+        for j in st:
+            if i==j:
+                count+=1
+        if i not in word:
+            word+= i+str(count)
+    return word
 
+s = "aaabbc"
 ans = count_ch(s)
 print(ans) """
 
