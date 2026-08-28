@@ -42,7 +42,7 @@ print(ans)  """
 # Input: abcabcbb 
 # Output: abc
 
-s = "abcabcbb"
+""" s = "abcabcbb"
 b = 0
 f = ""
 for i in range(0,len(s)):
@@ -52,7 +52,7 @@ for i in range(0,len(s)):
             if b<len(res):
                 b = len(res)
                 f = res
-print(f)
+print(f) """
 
 # 4. Write a Python program to reverse each word in a given sentence while keeping the order of the words unchanged. 
 # Input: Python is easy 
