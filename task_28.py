@@ -38,6 +38,22 @@ print(ans) """
 # Input : babad
 # Output : bab
 
+""" def ispalindrome(st):
+    b=0
+    f=''
+    for i in range(0,len(st)):
+        for j in range(i+1,len(st)):
+            res=st[i:j]
+            if(res==res[::-1]):
+                if(b<len(res)):
+                    b=len(res)
+                    f=res
+    return f
+    
+s = "babad"
+ans = ispalindrome(s)
+print(ans) """
+
 # 4.Write a Python function to remove all special characters from a string.
 # Input : a@1#b
 # Output : a1b
