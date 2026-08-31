@@ -13,9 +13,9 @@ n_li = ""
 for i in st: """
 
 # 4. palindrome of string.
-st = "aaa"
+""" st = "aaa"
 for i in range(len(st)):
     for j in range(i+1,len(st)):
         res = st[i:j]
-        print(res,res[::-1])
+        print(res) """
     
