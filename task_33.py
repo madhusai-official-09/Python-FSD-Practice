@@ -46,7 +46,7 @@ print(c(7)) """
 # 4. Write a function calculator(n) that returns three inner functions: add(x) → adds x to n sub(x) → subtracts x from n mul(x) → multiplies n by x All three functions must access the same variable n from the outer function. 
 # Input: add, sub, mul = calculator(1
 
-""" def calculator(n):
+def calculator(n):
     def addfun(x):
         nonlocal n
         n+=x
@@ -61,5 +61,5 @@ print(c(7)) """
         return n
     return addfun
 c = calculator(5)
-print(c(5)) """
+print(c(5))
             
