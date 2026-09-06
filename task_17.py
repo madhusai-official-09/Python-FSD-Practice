@@ -39,10 +39,13 @@ for i in li:
 # [10, 20, 30]
 # [25, 20, 15]
 
-li = [10, 20, 30, 5, 10, 15, 25, 20, 15]
+""" li = [10, 20, 30, 5, 10, 15, 25, 20, 15]
 n_li = []
 for i in range(0,len(li),3):
-    if 
+    n_li.append(li[i:i+3])
+for i in n_li:
+    if sum(i)>50:
+        print(i) """
  
    
 # 4.Write a Python program using List Comprehension to create a new list containing the square of all even numbers.
