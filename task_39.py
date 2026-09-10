@@ -36,7 +36,7 @@ print(f"Area: {r1.calculate_area()} Perimeter: {r1.calculate_perimeter()}") """
 # Input: name = "Arjun" employee_id = 101 salary = 30000 
 # Output: Name: Arjun Employee ID: 101 Salary: 30000 Updated Salary: 35000
 
-class Employee:
+""" class Employee:
     def __init__(self,name,emply_id,salary):
         self.name = name
         self.emply_id=emply_id
@@ -51,8 +51,22 @@ class Employee:
         
 employee1=Employee("Arjun",101,30000)
 employee1.bonus()
-employee1.display()
+employee1.display() """
 
 # 4. Create a class Mobile with attributes brand, model, and price. Create an object and display the mobile details. 
 # Input: brand = "Samsung" model = "A55" price = 30000 
 # Output: Brand: Samsung Model: A55 Price: 30000
+
+""" class Mobile:
+    def __init__(self,brand,model,price):
+        self.brand = brand
+        self.model = model
+        self.price = price
+    
+    def display(self):
+        print(f"Brand: {self.brand}")
+        print(f"Model: {self.model}")
+        print(f"Price: {self.price}")
+        
+mobile1 = Mobile("Samsung","A55",30000)
+mobile1.display() """
