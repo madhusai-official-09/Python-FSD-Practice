@@ -30,21 +30,30 @@ class Librarian(Person):
     print("Role: Librarian")
     
 class Book:
-  def __init__(self,title,book_id,Author,Status):
+  def __init__(self,title,book_id,author,status):
     self.title = title
     self.book_id = book_id
-    self.Author = Author
-    self.Status = Status
+    self.author = author
+    self.__Status = status
+    
+  @property
+  def status(self):
+    return self.__Status
+  
+  @status.setter
+  def status(self, value):
+    if value in ["Available", "Borrowed"]:
+      self.__Status = value
     
   def display_info(self):
     print(f"Title: {self.title}")
     print(f"Book ID: {self.book_id}")
-    print(f"Author: {self.Author}")
-    print(f"Status: {self.Status}")
+    print(f"author: {self.author}")
+    print(f"status: {self.status}")
       
 title = input("Enter the title of the book: ")
 book_id = input("Enter the book ID: ")
-Author = input("Enter the author of the book: ")
-Status = "Available"
-c1 = Book(title,book_id,Author,Status)
+author = input("Enter the author of the book: ")
+status = "Available"
+c1 = Book(title,book_id,author,status)
 c1.display_info()
