@@ -14,11 +14,19 @@
 print(reverse_number(123450)) """
 
 # 2. Write a Python program to find the student who scored the highest total marks using a nested dictionary. 
-# Input: students = { "S1": {"name": "Ravi", "marks": {"Python": 85, "SQL": 78, "Django": 90}}, "S2": {"name": "Anu", "marks": {"Python": 92, "SQL": 88, "Django": 95}}, "S3": {"name": "Kiran", "marks": {"Python": 80, "SQL": 75, "Django": 85}} } 
-# Output: Student with highest total marks: Anu
+# Input: students = { "S1": {"name": "Ravi", "marks": {"Python": 85, "SQL": 78, "Django": 90}}, "S2": {"name": "Anu", "marks": {"Python": 92, "SQL": 88, "Django": 76}}, "S3": {"name": "Kiran", "marks": {"Python": 80, "SQL": 95, "Django": 89}} } 
+# Output: Student with highest total marks: kiran
 
-students = { "S1": {"name": "Ravi", "marks": {"Python": 85, "SQL": 78, "Django": 90}}, "S2": {"name": "Anu", "marks": {"Python": 92, "SQL": 88, "Django": 95}}, "S3": {"name": "Kiran", "marks": {"Python": 80, "SQL": 75, "Django": 85}} }
-n = ""
-for i in students:
-    total = sum(students[i]["marks"].values())
-    students[i]["total"] = total
+""" students = { "S1": {"name": "Ravi", "marks": {"Python": 85, "SQL": 78, "Django": 90}}, "S2": {"name": "Anu", "marks": {"Python": 92, "SQL": 88, "Django": 76}}, "S3": {"name": "Kiran", "marks": {"Python": 80, "SQL": 95, "Django": 89}} }
+highest = 0
+topper = ""
+for student in students.values():
+    total = sum(student["marks"].values())
+    
+    if total >highest:
+        highest = total
+        topper = student["name"]
+        
+print(f"Student with highest total marks: {topper} - {highest}") """
+
+
