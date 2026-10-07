@@ -56,7 +56,15 @@ print(ans) """
 
 # 15432
 
-def max_after_removal(n, d):
-    
+""" def max_after_removal(n, d):
+    s = str(n)
+    d  = str(d)
+    best = ""
+    for i,ch in enumerate(s):
+        if ch==d:
+            n_s = s[:i]+s[i+1:]
+            if n_s>best:
+                best = n_s
+    return int(best)
 
-    
+print(max_after_removal(154325,5)) """
