@@ -22,7 +22,7 @@ def add_comment():
 
         cursor = conn.cursor()
 
-        # Validate task ID
+
         cursor.execute(
             "SELECT id FROM tasks WHERE id = %s",
             (task_id,)
@@ -31,7 +31,7 @@ def add_comment():
             print("Task ID not found.")
             return
 
-        # Validate employee ID
+
         cursor.execute(
             "SELECT id FROM employees WHERE id = %s",
             (employee_id,)
