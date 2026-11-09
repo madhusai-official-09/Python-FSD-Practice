@@ -17,7 +17,6 @@ def assign_task():
 
         cursor = conn.cursor()
 
-        # Check whether the task exists
         cursor.execute(
             "SELECT id FROM tasks WHERE id = %s",
             (task_id,)
@@ -26,7 +25,6 @@ def assign_task():
             print("Task ID not found.")
             return
 
-        # Check whether the employee exists
         cursor.execute(
             "SELECT id FROM employees WHERE id = %s",
             (employee_id,)
